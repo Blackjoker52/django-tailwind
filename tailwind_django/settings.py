@@ -143,3 +143,19 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+
+
+# Unnesesary Database stuff
+import environ
+import os
+
+env = environ.Env()
+environ.Env.read_env()
+
+# Render PostgreSQL databse (Live)
+import dj_database_url
+
+DARABASES = {
+    'default': dj_database_url.parse(env('DATABASE_URL'))
+}
