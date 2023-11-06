@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-b6bs&h!56s7u931@3gbvs8=%_p3kc7+n7d(aw3f@rzlu8nn%es
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -91,8 +91,8 @@ WSGI_APPLICATION = 'tailwind_django.wsgi.application'
 # Render PostgreSQL databse (Live)
 import dj_database_url
 
-DARABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+DATABASES = {
+    'default': dj_database_url.parse(env('DATABASE_URL')),
 }
 
 
